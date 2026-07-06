@@ -1,0 +1,67 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0fdf4;
+  color: #333;
+}
+
+.women-empowerment-section {
+  padding: 40px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.heading {
+  text-align: center;
+  font-size: 3rem;
+  color: #197d43;
+  margin-bottom: 30px;
+}
+
+.description-box {
+  background-color: #d6f5d6;
+  border-radius: 12px;
+  padding: 20px;
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.schemes-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.scheme-card {
+  background-color: #fff;
+  border-left: 6px solid #38b000;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.scheme-card h2 {
+  margin-top: 0;
+  color: #2d6a4f;
+}
+
+.scheme-card p {
+  margin: 5px 0;
+}
+
+.scheme-card a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 16px;
+  background-color: #38b000;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.scheme-card a:hover {
+  background-color: #2d6a4f;
+}

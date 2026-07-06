@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Antral Seva - Bridging Life, Building Future</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+
+<!-- Header Section -->
+<header>
+  <nav class="navbar">
+
+    <!-- Logo Section -->
+    <div class="logo-container">
+      <img src="https://i.ibb.co/2YvYndYr/GS-Logo.png" alt="Gram Seva Logo" class="logo" />
+      <div class="title-container">
+        <h1 class="title">Gram Seva</h1>
+        <p class="quote">Bridging Life, Building Future</p>
+      </div>
+    </div>
+
+    <!-- Auth Section (Login / Hello Username) -->
+    <div id="auth-section" style="margin-left: auto; display: flex; align-items: center;">
+      <a href="login.html" id="login-button" class="login-btn" style="margin-right: 10px;">Login</a>
+      <div id="user-info" style="display: none;">
+        <span style="font-size: 14px;">Hello, <span id="user-firstname" style="font-size: 17px; font-weight: bold;"></span></span>
+        <button onclick="logout()" style="margin-left: 10px; background-color: #d9534f; color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer;">Logout</button>
+      </div>
+    </div>
+
+   
+
+    <!-- Sidebar Open Button -->
+    <span style="font-size: 30px; cursor: pointer;" onclick="openNav()">&#9776;</span>
+  </nav>
+</header>
+
+<!-- Sidebar -->
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">Account</a>
+  <a href="#">History</a>
+  <a href="#">About</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+
+<!-- Your Remaining Page Content Starts Here -->
+<section class="banner">
+  <div class="banner-content">
+    <h2>Empowering Rural India</h2>
+    <p>Connecting villagers to government schemes and facilities for a better future.</p>
+  </div>
+</section>
+
+<!-- Sidebar functions -->
+<script>
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+  }
+
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+  }
+</script>
+
+<!-- Login Check and Display Hello Name -->
+<script>
+  window.onload = function () {
+    const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+    const loginButton = document.getElementById("login-button");
+    const userInfo = document.getElementById("user-info");
+    const userFirstName = document.getElementById("user-firstname");
+
+    if (currentUser) {
+      loginButton.style.display = "none";
+      userInfo.style.display = "flex";
+      userFirstName.textContent = currentUser.username;
+    } else {
+      loginButton.style.display = "inline-block";
+      userInfo.style.display = "none";
+    }
+  };
+
+  function logout() {
+    localStorage.removeItem("currentUser");
+    window.location.href = "login.html";
+  }
+</script>
+Google Translate Widget
+<div id="google_translate_element"></div>
+
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement(
+      {
+        pageLanguage: 'en', 
+        includedLanguages: 'en,hi,mr', 
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 
+      'google_translate_element'
+    );
+  }
+</script>
+
+<!-- <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> -->
+
+
+</header>
+
+
+    <!-- Banner Section
+    <section class="banner">
+      <div class="banner-content">
+        <h2>Empowering Rural India</h2>
+        <p>
+          Connecting villagers to government schemes and facilities for a better
+          future.
+        </p>
+      </div>
+    </section> -->
+
+    <!-- Schemes Section -->
+    <section class="schemes-scroll-section">
+      <h2>Maharashtra Government Schemes</h2>
+      <div class="scroll-box">
+        <div class="scroll-content">
+          <p><a href="https://pmkisan.gov.in/" target="_blank">✔️ PM-Kisan Yojana</a></p>
+          <p><a href="https://pmjay.gov.in/" target="_blank">✔️ Ayushman Bharat</a></p>
+          <p><a href="https://www.digitalindia.gov.in/" target="_blank">✔️ Digital India</a></p>
+<p><a href="https://www.startupindia.gov.in/" target="_blank">✔️ StartUp India</a></p>
+<p><a href="https://jaljeevanmission.gov.in/" target="_blank">✔️ Jal Jeevan Mission</a></p>
+<p><a href="https://pmuy.gov.in/" target="_blank">✔️ Ujjwala Yojana</a></p>
+<p><a href="https://www.mudra.org.in/" target="_blank">✔️ MUDRA Loans</a></p>
+<p><a href="https://www.skillindia.gov.in/" target="_blank">✔️ Skill India</a></p>
+<p><a href="https://pmgsy.nic.in/" target="_blank">✔️ Gram Sadak Yojana</a></p>
+<p><a href="https://mahadbt.maharashtra.gov.in/" target="_blank">✔️ Mukhyamantri Ladki Bahin Yojana</a></p>
+
+<p><a href="https://pmjay.gov.in/" target="_blank">✔️ Ayushman Bharat</a></p>
+<p><a href="https://www.digitalindia.gov.in/" target="_blank">✔️ Digital India</a></p>
+<p><a href="https://www.startupindia.gov.in/" target="_blank">✔️ StartUp India</a></p>
+<p><a href="https://jaljeevanmission.gov.in/" target="_blank">✔️ Jal Jeevan Mission</a></p>
+<p><a href="https://pmuy.gov.in/" target="_blank">✔️ Ujjwala Yojana</a></p>
+<p><a href="https://www.mudra.org.in/" target="_blank">✔️ MUDRA Loans</a></p>
+<p><a href="https://www.skillindia.gov.in/" target="_blank">✔️ Skill India</a></p>
+<p><a href="https://pmgsy.nic.in/" target="_blank">✔️ Gram Sadak Yojana</a></p>
+<p><a href="https://mahadbt.maharashtra.gov.in/" target="_blank">✔️ Mukhyamantri Ladki Bahin Yojana</a></p>
+
+
+        </div>
+      </div>
+    </section>
+
+    <section class="news">
+      <h2>Latest News and Announcements</h2>
+      <div class="news-container">
+        <div class="news-card">
+          <span class="date">10 Oct 2023</span>
+          <h3>New Education Policy</h3>
+          <p>Learn about the latest updates in the education sector.</p>
+          <a href="https://www.education.gov.in/nep" target="_blank"
+            >Read More</a
+          >
+        </div>
+        <div class="news-card">
+          <span class="date">08 Oct 2023</span>
+          <h3>Health Camp in Rural Areas</h3>
+          <p>Free health checkups for villagers.</p>
+          <a href="https://www.nhm.gov.in/" target="_blank">Read More</a>
+        </div>
+        <div class="news-card">
+          <span class="date">05 Oct 2023</span>
+          <h3>Job Fair Announcement</h3>
+          <p>Opportunities for rural youth.</p>
+          <a href="https://www.ncs.gov.in/" target="_blank">Read More</a>
+        </div>
+        <div class="news-card">
+          <span class="date">03 Oct 2023</span>
+          <h3>Women Empowerment Workshop</h3>
+          <p>Workshops for skill development.</p>
+          <a href="https://wcd.nic.in/" target="_blank">Read More</a>
+        </div>
+        <div class="news-card">
+          <span class="date">01 Oct 2023</span>
+          <h3>Farmers' Loan Waiver Scheme</h3>
+          <p>New loan waiver scheme announced.</p>
+          <a href="https://agricoop.nic.in/" target="_blank">Read More</a>
+        </div>
+        <div class="news-card">
+          <span class="date">28 Sep 2023</span>
+          <h3>Rural Health Mission</h3>
+          <p>New health initiatives for rural areas.</p>
+          <a
+            href="https://nhm.gov.in/index1.php?lang=1&level=1&sublinkid=154&lid=149"
+            target="_blank"
+            >Read More</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories">
+      <h2>Explore Categories</h2>
+      <div class="categories-container">
+        <div
+          class="category-card"
+          style="
+            background-image: url('https://i.ibb.co/prKs37yr/education-bg.jpg');
+          "
+        >
+          <h3>Education</h3>
+          <a href="Education.html" class="view-more">View More</a>
+        </div>
+        <div
+          class="category-card"
+          style="
+            background-image: url('https://i.ibb.co/67FtvkXY/health-bg.jpg');
+          "
+        >
+          <h3>Health</h3>
+          <a href="Health.html" class="view-more">View More</a>
+        </div>
+        <div
+          class="category-card"
+          style="background-image: url('https://i.ibb.co/KxWm5Mqf/jobs-bg.jpg')"
+        >
+          <h3>Job Opportunities</h3>
+          <a href="Jobs.html" class="view-more">View More</a>
+        </div>
+        <div
+          class="category-card"
+          style="
+            background-image: url('https://i.ibb.co/PGYrXFgL/farmers-bg.jpg');
+          "
+        >
+          <h3>Farmers</h3>
+          <a href="Farmers.html" class="view-more">View More</a>
+        </div>
+        <div
+          class="category-card"
+          style="
+            background-image: url('https://i.ibb.co/Y4grBjrz/women-empowerment-bg.jpg');
+          "
+        >
+          <h3>Women Empowerment</h3>
+          <a href="Women.html" class="view-more">View More</a>
+        </div>
+        <div
+          class="category-card"
+          style="background-image: url('https://i.ibb.co/KpB02f9q/others.jpg')"
+        >
+          <h3>Others</h3>
+          <a href="Women.html" class="view-more">View More</a>
+        </div>
+      </div>
+    </section>
+    <!-- About Us Section -->
+    <section class="about-us">
+      <div class="about-content">
+        <img
+          src="https://i.ibb.co/2YvYndYr/GS-Logo.png"
+          alt="About Us Image"
+          class="about-image"
+        />
+        <div class="about-text">
+          <h2>About Us</h2>
+          <p>
+            Gram Seva is dedicated to empowering rural India by connecting
+            villagers to government schemes and facilities. Our mission is to
+            bridge the gap between rural communities and the resources they need
+            to build a better future. We aim to provide easy access to
+            information, streamline application processes, and ensure
+            transparency in availing government benefits.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Google Translate Integration -->
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          { pageLanguage: "en", includedLanguages: "en,hi,mr" },
+          "google_translate_element"
+        );
+      }
+      (function () {
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        script.src =
+          "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+        document.body.appendChild(script);
+      })();
+    </script>
+    <script>
+        // Check if user is logged in and show name
+        window.onload = function () {
+          const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+          const loginBtn = document.getElementById("login-button");
+          const userInfo = document.getElementById("user-info");
+          const userNameSpan = document.getElementById("user-firstname");
+      
+          if (currentUser) {
+            loginBtn.style.display = "none";
+            userInfo.style.display = "inline-block";
+            userNameSpan.textContent = currentUser.name.split(" ")[0]; // Display only first name
+          } else {
+            loginBtn.style.display = "inline-block";
+            userInfo.style.display = "none";
+          }
+        };
+      
+        // Logout function
+        function logout() {
+          localStorage.removeItem("currentUser");
+          window.location.href = "login.html";
+        }
+      </script>
+      
+  </body>
+</html>
